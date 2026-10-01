@@ -1,0 +1,7 @@
+{
+  "name": "@omc/ui",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "license": "Apache-2.0"
+}

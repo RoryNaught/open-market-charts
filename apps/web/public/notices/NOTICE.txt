@@ -1,0 +1,8 @@
+Open Market Charts
+Copyright 2026 Open Market Charts contributors.
+
+TradingView Lightweight Charts™
+Copyright (с) 2025 TradingView, Inc. https://www.tradingview.com/
+
+Lightweight Charts is used without source modifications. Its Apache-2.0 license
+and notices are distributed in apps/web/public/notices and the built site.

@@ -1,0 +1,285 @@
+{
+  "schemaVersion": 1,
+  "measuredAt": "2026-10-01T00:24:35.579Z",
+  "environment": {
+    "node": "v26.7.0",
+    "platform": "darwin",
+    "release": "25.6.0",
+    "architecture": "arm64",
+    "cpu": "Apple M5",
+    "logicalCpus": 10,
+    "systemMemoryGB": 34.36,
+    "explicitGcAvailable": true
+  },
+  "methodology": {
+    "repetitions": 3,
+    "seed": 42,
+    "indicators": [
+      "SMA",
+      "EMA",
+      "VWAP",
+      "RSI",
+      "MACD",
+      "Bollinger",
+      "ATR",
+      "VolumeProfile"
+    ],
+    "profileVisibleBars": 500,
+    "generatorExcludedFromCalculation": true,
+    "networkAndBrowserExcluded": true
+  },
+  "history": [
+    {
+      "bars": 100000,
+      "trials": [
+        {
+          "generationMs": 29.44,
+          "buildMs": 83.64,
+          "packMs": 2.1,
+          "materializeMs": 58.27,
+          "calculationAndMaterializationMs": 141.92,
+          "liveRevisions": 10000,
+          "liveRevisionTotalMs": 34.21,
+          "liveRevisionsPerSecond": 292318,
+          "outputPoints": 1099787,
+          "outputBufferMB": 17.6,
+          "beforeMemory": {
+            "rssMB": 91.88,
+            "heapMB": 7.73,
+            "arrayBuffersMB": 0.41
+          },
+          "buildMemory": {
+            "rssMB": 195.99,
+            "heapMB": 43.75,
+            "arrayBuffersMB": 41.36
+          },
+          "materializedMemory": {
+            "rssMB": 295.21,
+            "heapMB": 114.86,
+            "arrayBuffersMB": 64.96
+          },
+          "checks": {
+            "finiteLastValues": true,
+            "profileVolumeConserved": true
+          }
+        },
+        {
+          "generationMs": 21.93,
+          "buildMs": 87.17,
+          "packMs": 1.23,
+          "materializeMs": 79.08,
+          "calculationAndMaterializationMs": 166.25,
+          "liveRevisions": 10000,
+          "liveRevisionTotalMs": 18.18,
+          "liveRevisionsPerSecond": 549939,
+          "outputPoints": 1099787,
+          "outputBufferMB": 17.6,
+          "beforeMemory": {
+            "rssMB": 330.4,
+            "heapMB": 7.96,
+            "arrayBuffersMB": 39.37
+          },
+          "buildMemory": {
+            "rssMB": 347.98,
+            "heapMB": 26.8,
+            "arrayBuffersMB": 29.77
+          },
+          "materializedMemory": {
+            "rssMB": 374.47,
+            "heapMB": 114.41,
+            "arrayBuffersMB": 64.96
+          },
+          "checks": {
+            "finiteLastValues": true,
+            "profileVolumeConserved": true
+          }
+        },
+        {
+          "generationMs": 19.19,
+          "buildMs": 79.95,
+          "packMs": 0.66,
+          "materializeMs": 31.5,
+          "calculationAndMaterializationMs": 111.45,
+          "liveRevisions": 10000,
+          "liveRevisionTotalMs": 57.22,
+          "liveRevisionsPerSecond": 174770,
+          "outputPoints": 1099787,
+          "outputBufferMB": 17.6,
+          "beforeMemory": {
+            "rssMB": 364.92,
+            "heapMB": 7.97,
+            "arrayBuffersMB": 0.41
+          },
+          "buildMemory": {
+            "rssMB": 379.21,
+            "heapMB": 34.04,
+            "arrayBuffersMB": 29.77
+          },
+          "materializedMemory": {
+            "rssMB": 385.34,
+            "heapMB": 116.05,
+            "arrayBuffersMB": 64.96
+          },
+          "checks": {
+            "finiteLastValues": true,
+            "profileVolumeConserved": true
+          }
+        }
+      ],
+      "medianCpuReadyMs": 141.92,
+      "provisionalReadyTargetMs": 2000,
+      "cpuSubtotalWithinTarget": true,
+      "browserReadyTargetStatus": "NOT_MEASURED"
+    },
+    {
+      "bars": 500000,
+      "trials": [
+        {
+          "generationMs": 77.48,
+          "buildMs": 454.95,
+          "packMs": 34.83,
+          "materializeMs": 383.68,
+          "calculationAndMaterializationMs": 838.63,
+          "liveRevisions": 10000,
+          "liveRevisionTotalMs": 15.38,
+          "liveRevisionsPerSecond": 650366,
+          "outputPoints": 5499787,
+          "outputBufferMB": 88,
+          "beforeMemory": {
+            "rssMB": 371.83,
+            "heapMB": 6.79,
+            "arrayBuffersMB": 0.41
+          },
+          "buildMemory": {
+            "rssMB": 521.67,
+            "heapMB": 126.55,
+            "arrayBuffersMB": 122.04
+          },
+          "materializedMemory": {
+            "rssMB": 1103.15,
+            "heapMB": 538.81,
+            "arrayBuffersMB": 293.84
+          },
+          "checks": {
+            "finiteLastValues": true,
+            "profileVolumeConserved": true
+          }
+        },
+        {
+          "generationMs": 77.08,
+          "buildMs": 435.59,
+          "packMs": 2.4,
+          "materializeMs": 299.64,
+          "calculationAndMaterializationMs": 735.23,
+          "liveRevisions": 10000,
+          "liveRevisionTotalMs": 16.01,
+          "liveRevisionsPerSecond": 624686,
+          "outputPoints": 5499787,
+          "outputBufferMB": 88,
+          "beforeMemory": {
+            "rssMB": 1055.28,
+            "heapMB": 6.76,
+            "arrayBuffersMB": 0.41
+          },
+          "buildMemory": {
+            "rssMB": 1076,
+            "heapMB": 126.37,
+            "arrayBuffersMB": 117.85
+          },
+          "materializedMemory": {
+            "rssMB": 1112.13,
+            "heapMB": 538.86,
+            "arrayBuffersMB": 293.84
+          },
+          "checks": {
+            "finiteLastValues": true,
+            "profileVolumeConserved": true
+          }
+        },
+        {
+          "generationMs": 75.27,
+          "buildMs": 408.8,
+          "packMs": 2.63,
+          "materializeMs": 298.11,
+          "calculationAndMaterializationMs": 706.91,
+          "liveRevisions": 10000,
+          "liveRevisionTotalMs": 14.2,
+          "liveRevisionsPerSecond": 704021,
+          "outputPoints": 5499787,
+          "outputBufferMB": 88,
+          "beforeMemory": {
+            "rssMB": 1063.96,
+            "heapMB": 6.8,
+            "arrayBuffersMB": 0.41
+          },
+          "buildMemory": {
+            "rssMB": 1072.01,
+            "heapMB": 125.52,
+            "arrayBuffersMB": 117.85
+          },
+          "materializedMemory": {
+            "rssMB": 1113.24,
+            "heapMB": 538.83,
+            "arrayBuffersMB": 293.84
+          },
+          "checks": {
+            "finiteLastValues": true,
+            "profileVolumeConserved": true
+          }
+        }
+      ],
+      "medianCpuReadyMs": 735.23,
+      "provisionalReadyTargetMs": 5000,
+      "cpuSubtotalWithinTarget": true,
+      "browserReadyTargetStatus": "NOT_MEASURED"
+    }
+  ],
+  "ingestion": [
+    {
+      "tradesPerVirtualSecond": 1000,
+      "virtualSeconds": 60,
+      "uniqueTrades": 60000,
+      "replayMode": "Unpaced virtual clock; 60 Hz coalescing. Measures CPU capacity, not a wall-clock soak.",
+      "durationMs": 14.82,
+      "processedTradesPerCpuSecond": 4049266,
+      "accepted": 60000,
+      "eventLoss": 0,
+      "duplicatesRejected": 61,
+      "expectedDuplicates": 61,
+      "expectedVolume": 180000,
+      "actualVolume": 180000,
+      "exactOHLCV": true,
+      "emittedBars": 2,
+      "flushes": 3600,
+      "maxPendingBars": 2,
+      "flushP50Ms": 0,
+      "flushP95Ms": 0
+    },
+    {
+      "tradesPerVirtualSecond": 10000,
+      "virtualSeconds": 5,
+      "uniqueTrades": 50000,
+      "replayMode": "Unpaced virtual clock; 60 Hz coalescing. Measures CPU capacity, not a wall-clock soak.",
+      "durationMs": 8.66,
+      "processedTradesPerCpuSecond": 5773061,
+      "accepted": 50000,
+      "eventLoss": 0,
+      "duplicatesRejected": 51,
+      "expectedDuplicates": 51,
+      "expectedVolume": 150000,
+      "actualVolume": 150000,
+      "exactOHLCV": true,
+      "emittedBars": 1,
+      "flushes": 300,
+      "maxPendingBars": 1,
+      "flushP50Ms": 0,
+      "flushP95Ms": 0
+    }
+  ],
+  "browser": {
+    "frameIntervalP95Ms": null,
+    "inputToPaintP95Ms": null,
+    "workerRoundTripP95Ms": null,
+    "status": "NOT_MEASURED: run browser benchmark separately"
+  }
+}

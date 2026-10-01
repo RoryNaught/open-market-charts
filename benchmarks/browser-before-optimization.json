@@ -1,0 +1,752 @@
+{
+  "schemaVersion": 1,
+  "measuredAt": "2026-10-01T00:32:20.824Z",
+  "environment": {
+    "browser": "153.0.8010.12",
+    "headless": true,
+    "os": "darwin",
+    "release": "25.6.0",
+    "architecture": "arm64",
+    "cpu": "Apple M5",
+    "logicalCpus": 10,
+    "systemMemoryGB": 34.359738368,
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "deviceScaleFactor": 1
+  },
+  "methodology": "One run per scenario against Vite development server. Real Chromium canvas and bundled module worker. Generated history excluded from ready timing. Streaming is wall-clock paced, with events aggregated before 60 Hz bar coalescing.",
+  "scenarios": [
+    {
+      "bars": 100000,
+      "indicators": [
+        "SMA",
+        "EMA",
+        "VWAP",
+        "RSI",
+        "MACD",
+        "Bollinger",
+        "ATR",
+        "VolumeProfile"
+      ],
+      "panes": 5,
+      "readyDefinition": "Synchronous candles+volume ingestion, worker reset, all requested indicator series ingested, then two requestAnimationFrame callbacks. Excludes generated data creation and network.",
+      "readyMs": 900.8999996185303,
+      "candleSetDataMs": 144.7999997138977,
+      "lastIndicatorIngestionMs": 72.69999980926514,
+      "targetReadyMs": 2000,
+      "readyTargetPassed": true,
+      "frames": {
+        "setup": {
+          "samples": 1,
+          "p50Ms": 16.60000000000001,
+          "p95Ms": 16.60000000000001,
+          "maxMs": 16.60000000000001
+        },
+        "load": {
+          "samples": 8,
+          "p50Ms": 16.80000000000001,
+          "p95Ms": 633.2,
+          "maxMs": 633.2
+        },
+        "interaction": {
+          "samples": 97,
+          "p50Ms": 16.699999999999818,
+          "p95Ms": 16.799999999999955,
+          "maxMs": 466.5999999999999
+        },
+        "stream-1000": {
+          "samples": 56,
+          "p50Ms": 133.39999999999964,
+          "p95Ms": 200,
+          "maxMs": 250
+        },
+        "stream-10000": {
+          "samples": 10,
+          "p50Ms": 166.6999999999989,
+          "p95Ms": 200,
+          "maxMs": 200
+        }
+      },
+      "inputDispatchToTwoFrames": {
+        "samples": 96,
+        "p50Ms": 17.299999713897705,
+        "p95Ms": 30.199999809265137,
+        "maxMs": 32.90000009536743,
+        "definition": "DOM input listener entry through two rAF callbacks; proxy, not a direct compositor presentation timestamp."
+      },
+      "eventTiming": {
+        "samples": 18,
+        "p50Ms": 24,
+        "p95Ms": 32,
+        "maxMs": 32,
+        "definition": "Chromium Event Timing interaction durations; entries below 16ms threshold may be absent.",
+        "entries": [
+          {
+            "name": "pointerdown",
+            "durationMs": 32,
+            "interactionId": 3812
+          },
+          {
+            "name": "pointerup",
+            "durationMs": 32,
+            "interactionId": 3812
+          },
+          {
+            "name": "click",
+            "durationMs": 32,
+            "interactionId": 3812
+          },
+          {
+            "name": "pointerdown",
+            "durationMs": 32,
+            "interactionId": 3819
+          },
+          {
+            "name": "pointerup",
+            "durationMs": 32,
+            "interactionId": 3819
+          },
+          {
+            "name": "click",
+            "durationMs": 32,
+            "interactionId": 3819
+          },
+          {
+            "name": "pointerdown",
+            "durationMs": 24,
+            "interactionId": 3826
+          },
+          {
+            "name": "pointerup",
+            "durationMs": 16,
+            "interactionId": 3826
+          },
+          {
+            "name": "click",
+            "durationMs": 16,
+            "interactionId": 3826
+          },
+          {
+            "name": "pointerdown",
+            "durationMs": 24,
+            "interactionId": 3833
+          },
+          {
+            "name": "pointerup",
+            "durationMs": 16,
+            "interactionId": 3833
+          },
+          {
+            "name": "click",
+            "durationMs": 16,
+            "interactionId": 3833
+          },
+          {
+            "name": "pointerdown",
+            "durationMs": 24,
+            "interactionId": 3840
+          },
+          {
+            "name": "pointerup",
+            "durationMs": 16,
+            "interactionId": 3840
+          },
+          {
+            "name": "click",
+            "durationMs": 16,
+            "interactionId": 3840
+          },
+          {
+            "name": "pointerdown",
+            "durationMs": 24,
+            "interactionId": 3847
+          },
+          {
+            "name": "pointerup",
+            "durationMs": 16,
+            "interactionId": 3847
+          },
+          {
+            "name": "click",
+            "durationMs": 16,
+            "interactionId": 3847
+          }
+        ]
+      },
+      "workers": {
+        "calculation": {
+          "samples": 39,
+          "p50Ms": 0.09999990463256836,
+          "p95Ms": 0.19999980926513672,
+          "maxMs": 70.10000038146973
+        },
+        "callbackRoundTrip": {
+          "samples": 39,
+          "p50Ms": 1.0999999046325684,
+          "p95Ms": 108.80000019073486,
+          "maxMs": 142.30000019073486
+        },
+        "byPhase": {
+          "load": {
+            "calculation": {
+              "samples": 1,
+              "p50Ms": 70.10000038146973,
+              "p95Ms": 70.10000038146973,
+              "maxMs": 70.10000038146973
+            },
+            "callbackRoundTrip": {
+              "samples": 1,
+              "p50Ms": 108.80000019073486,
+              "p95Ms": 108.80000019073486,
+              "maxMs": 108.80000019073486
+            }
+          },
+          "stream-1000": {
+            "calculation": {
+              "samples": 30,
+              "p50Ms": 0.09999990463256836,
+              "p95Ms": 0.09999990463256836,
+              "maxMs": 0.19999980926513672
+            },
+            "callbackRoundTrip": {
+              "samples": 30,
+              "p50Ms": 1.0999999046325684,
+              "p95Ms": 1.5999999046325684,
+              "maxMs": 13.099999904632568
+            }
+          },
+          "stream-10000": {
+            "calculation": {
+              "samples": 8,
+              "p50Ms": 0,
+              "p95Ms": 0.09999990463256836,
+              "maxMs": 0.09999990463256836
+            },
+            "callbackRoundTrip": {
+              "samples": 8,
+              "p50Ms": 2.0999999046325684,
+              "p95Ms": 142.30000019073486,
+              "maxMs": 142.30000019073486
+            }
+          }
+        },
+        "maxPendingRequests": 2,
+        "undrainedRequests": 0
+      },
+      "longTasks": [
+        {
+          "phase": "load",
+          "durationMs": 150
+        },
+        {
+          "phase": "load",
+          "durationMs": 407
+        },
+        {
+          "phase": "load",
+          "durationMs": 237
+        },
+        {
+          "phase": "stream-1000",
+          "durationMs": 75
+        },
+        {
+          "phase": "stream-1000",
+          "durationMs": 87
+        },
+        {
+          "phase": "stream-1000",
+          "durationMs": 73
+        },
+        {
+          "phase": "stream-1000",
+          "durationMs": 67
+        },
+        {
+          "phase": "stream-1000",
+          "durationMs": 78
+        },
+        {
+          "phase": "stream-1000",
+          "durationMs": 72
+        },
+        {
+          "phase": "stream-1000",
+          "durationMs": 115
+        },
+        {
+          "phase": "stream-1000",
+          "durationMs": 85
+        },
+        {
+          "phase": "stream-1000",
+          "durationMs": 71
+        },
+        {
+          "phase": "stream-1000",
+          "durationMs": 67
+        },
+        {
+          "phase": "stream-1000",
+          "durationMs": 73
+        },
+        {
+          "phase": "stream-1000",
+          "durationMs": 68
+        },
+        {
+          "phase": "stream-1000",
+          "durationMs": 71
+        },
+        {
+          "phase": "stream-1000",
+          "durationMs": 86
+        },
+        {
+          "phase": "stream-1000",
+          "durationMs": 71
+        },
+        {
+          "phase": "stream-1000",
+          "durationMs": 68
+        },
+        {
+          "phase": "stream-1000",
+          "durationMs": 72
+        },
+        {
+          "phase": "stream-1000",
+          "durationMs": 67
+        },
+        {
+          "phase": "stream-1000",
+          "durationMs": 76
+        },
+        {
+          "phase": "stream-1000",
+          "durationMs": 70
+        },
+        {
+          "phase": "stream-1000",
+          "durationMs": 76
+        },
+        {
+          "phase": "stream-1000",
+          "durationMs": 87
+        },
+        {
+          "phase": "stream-1000",
+          "durationMs": 75
+        },
+        {
+          "phase": "stream-1000",
+          "durationMs": 69
+        },
+        {
+          "phase": "stream-1000",
+          "durationMs": 77
+        },
+        {
+          "phase": "stream-1000",
+          "durationMs": 90
+        },
+        {
+          "phase": "stream-1000",
+          "durationMs": 154
+        },
+        {
+          "phase": "stream-1000",
+          "durationMs": 72
+        },
+        {
+          "phase": "stream-1000",
+          "durationMs": 71
+        },
+        {
+          "phase": "stream-1000",
+          "durationMs": 72
+        },
+        {
+          "phase": "stream-1000",
+          "durationMs": 71
+        },
+        {
+          "phase": "stream-1000",
+          "durationMs": 66
+        },
+        {
+          "phase": "stream-1000",
+          "durationMs": 76
+        },
+        {
+          "phase": "stream-1000",
+          "durationMs": 76
+        },
+        {
+          "phase": "stream-1000",
+          "durationMs": 90
+        },
+        {
+          "phase": "stream-1000",
+          "durationMs": 93
+        },
+        {
+          "phase": "stream-1000",
+          "durationMs": 87
+        },
+        {
+          "phase": "stream-1000",
+          "durationMs": 72
+        },
+        {
+          "phase": "stream-1000",
+          "durationMs": 75
+        },
+        {
+          "phase": "stream-1000",
+          "durationMs": 70
+        },
+        {
+          "phase": "stream-1000",
+          "durationMs": 81
+        },
+        {
+          "phase": "stream-1000",
+          "durationMs": 95
+        },
+        {
+          "phase": "stream-1000",
+          "durationMs": 75
+        },
+        {
+          "phase": "stream-1000",
+          "durationMs": 67
+        },
+        {
+          "phase": "stream-1000",
+          "durationMs": 74
+        },
+        {
+          "phase": "stream-1000",
+          "durationMs": 77
+        },
+        {
+          "phase": "stream-1000",
+          "durationMs": 141
+        },
+        {
+          "phase": "stream-1000",
+          "durationMs": 102
+        },
+        {
+          "phase": "stream-1000",
+          "durationMs": 95
+        },
+        {
+          "phase": "stream-1000",
+          "durationMs": 109
+        },
+        {
+          "phase": "stream-1000",
+          "durationMs": 79
+        },
+        {
+          "phase": "stream-1000",
+          "durationMs": 69
+        },
+        {
+          "phase": "stream-1000",
+          "durationMs": 74
+        },
+        {
+          "phase": "stream-1000",
+          "durationMs": 70
+        },
+        {
+          "phase": "stream-1000",
+          "durationMs": 79
+        },
+        {
+          "phase": "stream-1000",
+          "durationMs": 71
+        },
+        {
+          "phase": "stream-1000",
+          "durationMs": 74
+        },
+        {
+          "phase": "stream-1000",
+          "durationMs": 80
+        },
+        {
+          "phase": "stream-1000",
+          "durationMs": 71
+        },
+        {
+          "phase": "stream-1000",
+          "durationMs": 60
+        },
+        {
+          "phase": "stream-10000",
+          "durationMs": 72
+        },
+        {
+          "phase": "stream-10000",
+          "durationMs": 85
+        },
+        {
+          "phase": "stream-10000",
+          "durationMs": 72
+        },
+        {
+          "phase": "stream-10000",
+          "durationMs": 84
+        },
+        {
+          "phase": "stream-10000",
+          "durationMs": 75
+        },
+        {
+          "phase": "stream-10000",
+          "durationMs": 133
+        },
+        {
+          "phase": "stream-10000",
+          "durationMs": 101
+        },
+        {
+          "phase": "stream-10000",
+          "durationMs": 88
+        },
+        {
+          "phase": "stream-10000",
+          "durationMs": 80
+        },
+        {
+          "phase": "stream-10000",
+          "durationMs": 85
+        },
+        {
+          "phase": "stream-10000",
+          "durationMs": 74
+        },
+        {
+          "phase": "stream-10000",
+          "durationMs": 85
+        },
+        {
+          "phase": "stream-10000",
+          "durationMs": 73
+        },
+        {
+          "phase": "stream-10000",
+          "durationMs": 69
+        },
+        {
+          "phase": "stream-10000",
+          "durationMs": 72
+        },
+        {
+          "phase": "idle",
+          "durationMs": 58
+        }
+      ],
+      "errors": [],
+      "cdpMemory": {
+        "jsHeapUsedMB": 1052.693892,
+        "jsHeapTotalMB": 1107.80416,
+        "note": "Main-thread V8 heap only; excludes worker heaps, canvas/GPU allocations, and native renderer memory."
+      },
+      "streaming": [
+        {
+          "rate": 1000,
+          "requestedSeconds": 5,
+          "offeredTrades": 5000,
+          "accepted": 5000,
+          "uniqueEventsLost": 0,
+          "expectedFinalVolume": 5292.018506634049,
+          "actualFinalVolume": 5292.018506634049,
+          "volumeError": 0,
+          "ingestionWallMs": 5176.400000095367,
+          "totalWallMs": 5330.200000286102,
+          "workerDrainMs": 153.80000019073486,
+          "flushes": 30,
+          "maxPendingBars": 1
+        },
+        {
+          "rate": 10000,
+          "requestedSeconds": 1,
+          "offeredTrades": 10000,
+          "accepted": 10000,
+          "uniqueEventsLost": 0,
+          "expectedFinalVolume": 15292.01850663405,
+          "actualFinalVolume": 15292.01850663405,
+          "volumeError": 0,
+          "ingestionWallMs": 1094.6999998092651,
+          "totalWallMs": 1368.8999996185303,
+          "workerDrainMs": 274.19999980926514,
+          "flushes": 8,
+          "maxPendingBars": 1
+        }
+      ],
+      "pageErrors": [],
+      "cpuProfile": {
+        "path": "benchmarks/browser-profile-100000.json",
+        "topSelfSamples": [
+          {
+            "function": "(garbage collector)",
+            "url": "",
+            "line": 0,
+            "hits": 1084
+          },
+          {
+            "function": "_internal__fillRawPoints",
+            "url": "http://127.0.0.1:5173/node_modules/.vite/deps/lightweight-charts.js?v=0683029e",
+            "line": 13325,
+            "hits": 581
+          },
+          {
+            "function": "Line",
+            "url": "http://127.0.0.1:5173/node_modules/.vite/deps/lightweight-charts.js?v=0683029e",
+            "line": 3076,
+            "hits": 547
+          },
+          {
+            "function": "Line",
+            "url": "http://127.0.0.1:5173/node_modules/.vite/deps/lightweight-charts.js?v=0683029e",
+            "line": 3076,
+            "hits": 543
+          },
+          {
+            "function": "_internal__fillRawPoints",
+            "url": "http://127.0.0.1:5173/node_modules/.vite/deps/lightweight-charts.js?v=0683029e",
+            "line": 13325,
+            "hits": 402
+          },
+          {
+            "function": "Line",
+            "url": "http://127.0.0.1:5173/node_modules/.vite/deps/lightweight-charts.js?v=0683029e",
+            "line": 3076,
+            "hits": 341
+          },
+          {
+            "function": "Histogram",
+            "url": "http://127.0.0.1:5173/node_modules/.vite/deps/lightweight-charts.js?v=0683029e",
+            "line": 3084,
+            "hits": 303
+          },
+          {
+            "function": "_internal__fillRawPoints",
+            "url": "http://127.0.0.1:5173/node_modules/.vite/deps/lightweight-charts.js?v=0683029e",
+            "line": 13325,
+            "hits": 266
+          },
+          {
+            "function": "_internal_setData",
+            "url": "http://127.0.0.1:5173/node_modules/.vite/deps/lightweight-charts.js?v=0683029e",
+            "line": 3186,
+            "hits": 155
+          },
+          {
+            "function": "_internal_setData",
+            "url": "http://127.0.0.1:5173/node_modules/.vite/deps/lightweight-charts.js?v=0683029e",
+            "line": 3186,
+            "hits": 110
+          },
+          {
+            "function": "(program)",
+            "url": "",
+            "line": 0,
+            "hits": 108
+          },
+          {
+            "function": "Candlestick",
+            "url": "http://127.0.0.1:5173/node_modules/.vite/deps/lightweight-charts.js?v=0683029e",
+            "line": 3020,
+            "hits": 106
+          },
+          {
+            "function": "_internal__createRawItem",
+            "url": "http://127.0.0.1:5173/node_modules/.vite/deps/lightweight-charts.js?v=0683029e",
+            "line": 14365,
+            "hits": 71
+          },
+          {
+            "function": "_internal__createRawItem",
+            "url": "http://127.0.0.1:5173/node_modules/.vite/deps/lightweight-charts.js?v=0683029e",
+            "line": 14365,
+            "hits": 62
+          },
+          {
+            "function": "Candlestick",
+            "url": "http://127.0.0.1:5173/node_modules/.vite/deps/lightweight-charts.js?v=0683029e",
+            "line": 3020,
+            "hits": 59
+          },
+          {
+            "function": "_internal_setData",
+            "url": "http://127.0.0.1:5173/node_modules/.vite/deps/lightweight-charts.js?v=0683029e",
+            "line": 3186,
+            "hits": 44
+          },
+          {
+            "function": "_internal_setData",
+            "url": "http://127.0.0.1:5173/node_modules/.vite/deps/lightweight-charts.js?v=0683029e",
+            "line": 3186,
+            "hits": 33
+          },
+          {
+            "function": "",
+            "url": "http://127.0.0.1:5173/node_modules/.vite/deps/lightweight-charts.js?v=0683029e",
+            "line": 3190,
+            "hits": 31
+          },
+          {
+            "function": "number",
+            "url": "http://127.0.0.1:5173/src/main.tsx?t=1790814731654",
+            "line": 18,
+            "hits": 26
+          },
+          {
+            "function": "(idle)",
+            "url": "",
+            "line": 0,
+            "hits": 25
+          },
+          {
+            "function": "_internal_setData",
+            "url": "http://127.0.0.1:5173/node_modules/.vite/deps/lightweight-charts.js?v=0683029e",
+            "line": 3186,
+            "hits": 20
+          },
+          {
+            "function": "number",
+            "url": "http://127.0.0.1:5173/src/main.tsx?t=1790814731654",
+            "line": 18,
+            "hits": 15
+          },
+          {
+            "function": "",
+            "url": "http://127.0.0.1:5173/node_modules/.vite/deps/lightweight-charts.js?v=0683029e",
+            "line": 3190,
+            "hits": 15
+          },
+          {
+            "function": "_internal__fillRawPoints",
+            "url": "http://127.0.0.1:5173/node_modules/.vite/deps/lightweight-charts.js?v=0683029e",
+            "line": 14174,
+            "hits": 14
+          },
+          {
+            "function": "Candlestick",
+            "url": "http://127.0.0.1:5173/node_modules/.vite/deps/lightweight-charts.js?v=0683029e",
+            "line": 3020,
+            "hits": 12
+          }
+        ]
+      }
+    }
+  ]
+}

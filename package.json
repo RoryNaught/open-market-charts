@@ -1,0 +1,61 @@
+{
+  "name": "open-market-charts",
+  "version": "0.1.0",
+  "description": "An open-source market chart workspace with modular data, indicator, and drawing engines.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RoryNaught/open-market-charts.git"
+  },
+  "homepage": "https://github.com/RoryNaught/open-market-charts#readme",
+  "bugs": {
+    "url": "https://github.com/RoryNaught/open-market-charts/issues"
+  },
+  "private": true,
+  "type": "module",
+  "license": "Apache-2.0",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:e2e": "playwright test",
+    "gateway": "node --env-file-if-exists=.env --import tsx apps/gateway/src/index.ts",
+    "benchmark": "node --expose-gc --import tsx scripts/benchmark.ts",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "benchmark:browser": "node scripts/browser-benchmark.mjs"
+  },
+  "dependencies": {
+    "idb": "^8.0.3",
+    "lightweight-charts": "^5.2.1",
+    "lucide-react": "^0.468.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "ws": "^8.18.0",
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.55.0",
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@types/ws": "^8.5.0",
+    "@vitejs/plugin-react": "^5.0.0",
+    "fake-indexeddb": "^6.2.0",
+    "fancy-canvas": "2.1.0",
+    "prettier": "^3.9.9",
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.0",
+    "vite": "^7.1.0",
+    "vitest": "4.1.11"
+  },
+  "engines": {
+    "node": ">=24"
+  }
+}

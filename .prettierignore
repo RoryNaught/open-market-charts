@@ -1,0 +1,9 @@
+node_modules
+dist
+playwright-report
+test-results*
+package-lock.json
+benchmarks/*.json
+LICENSE
+NOTICE
+apps/web/public/notices

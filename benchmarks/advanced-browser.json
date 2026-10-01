@@ -1,0 +1,535 @@
+{
+  "schemaVersion": 1,
+  "measuredAt": "2026-10-01T01:17:54.644Z",
+  "environment": {
+    "browser": "153.0.8010.12",
+    "headless": true,
+    "os": "darwin",
+    "release": "25.6.0",
+    "architecture": "arm64",
+    "cpu": "Apple M5",
+    "logicalCpus": 10,
+    "systemMemoryGB": 34.359738368,
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "deviceScaleFactor": 1
+  },
+  "methodology": "One run per scenario against Vite development server. Real Chromium canvas and bundled module worker. Generated history excluded from ready timing. Streaming is wall-clock paced, with events aggregated before 60 Hz bar coalescing.",
+  "scenarios": [
+    {
+      "bars": 100000,
+      "windowChecks": {
+        "completeTimelineMapping": true,
+        "historicalViewportHasTrueLatestPrice": true,
+        "boundedPriceRows": true,
+        "sampledPriceRows": 2502,
+        "recursiveHeikinAshiPreserved": true
+      },
+      "indicators": [
+        "SMA",
+        "EMA",
+        "VWAP",
+        "RSI",
+        "MACD",
+        "Bollinger",
+        "ATR",
+        "VolumeProfile",
+        "AnchoredVWAP",
+        "Supertrend",
+        "SqueezeMomentum",
+        "MarketStructure",
+        "FairValueGaps"
+      ],
+      "panes": 6,
+      "readyDefinition": "Synchronous candles+volume ingestion, worker reset, all requested indicator series ingested, then two requestAnimationFrame callbacks. Excludes generated data creation and network.",
+      "readyMs": 520.5999999046326,
+      "candleSetDataMs": 51.09999990463257,
+      "lastIndicatorIngestionMs": 4.400000095367432,
+      "targetReadyMs": 2000,
+      "readyTargetPassed": true,
+      "frames": {
+        "setup": {
+          "samples": 1,
+          "p50Ms": 16.700000000000017,
+          "p95Ms": 16.700000000000017,
+          "maxMs": 16.700000000000017
+        },
+        "load": {
+          "samples": 21,
+          "p50Ms": 16.69999999999999,
+          "p95Ms": 49.99999999999997,
+          "maxMs": 149.89999999999998
+        },
+        "idle": {
+          "samples": 6,
+          "p50Ms": 66.59999999999991,
+          "p95Ms": 183.30000000000007,
+          "maxMs": 183.30000000000007
+        },
+        "interaction": {
+          "samples": 95,
+          "p50Ms": 16.699999999999818,
+          "p95Ms": 16.799999999999955,
+          "maxMs": 16.800000000000182
+        },
+        "stream-1000": {
+          "samples": 303,
+          "p50Ms": 16.699999999999818,
+          "p95Ms": 16.700000000000728,
+          "maxMs": 16.800000000000182
+        },
+        "stream-10000": {
+          "samples": 63,
+          "p50Ms": 16.69999999999891,
+          "p95Ms": 16.700000000000728,
+          "maxMs": 16.799999999999272
+        }
+      },
+      "inputDispatchToTwoFrames": {
+        "samples": 96,
+        "p50Ms": 17.300000190734863,
+        "p95Ms": 29.800000190734863,
+        "maxMs": 31.600000381469727,
+        "definition": "DOM input listener entry through two rAF callbacks; proxy, not a direct compositor presentation timestamp."
+      },
+      "eventTiming": {
+        "samples": 18,
+        "p50Ms": 24,
+        "p95Ms": 32,
+        "maxMs": 32,
+        "definition": "Chromium Event Timing interaction durations; entries below 16ms threshold may be absent.",
+        "entries": [
+          {
+            "name": "pointerdown",
+            "durationMs": 32,
+            "interactionId": 5031
+          },
+          {
+            "name": "pointerup",
+            "durationMs": 32,
+            "interactionId": 5031
+          },
+          {
+            "name": "click",
+            "durationMs": 32,
+            "interactionId": 5031
+          },
+          {
+            "name": "pointerdown",
+            "durationMs": 32,
+            "interactionId": 5038
+          },
+          {
+            "name": "pointerup",
+            "durationMs": 32,
+            "interactionId": 5038
+          },
+          {
+            "name": "click",
+            "durationMs": 32,
+            "interactionId": 5038
+          },
+          {
+            "name": "pointerdown",
+            "durationMs": 24,
+            "interactionId": 5045
+          },
+          {
+            "name": "pointerup",
+            "durationMs": 16,
+            "interactionId": 5045
+          },
+          {
+            "name": "click",
+            "durationMs": 16,
+            "interactionId": 5045
+          },
+          {
+            "name": "pointerdown",
+            "durationMs": 24,
+            "interactionId": 5052
+          },
+          {
+            "name": "pointerup",
+            "durationMs": 16,
+            "interactionId": 5052
+          },
+          {
+            "name": "click",
+            "durationMs": 16,
+            "interactionId": 5052
+          },
+          {
+            "name": "pointerdown",
+            "durationMs": 24,
+            "interactionId": 5059
+          },
+          {
+            "name": "pointerup",
+            "durationMs": 16,
+            "interactionId": 5059
+          },
+          {
+            "name": "click",
+            "durationMs": 16,
+            "interactionId": 5059
+          },
+          {
+            "name": "pointerdown",
+            "durationMs": 24,
+            "interactionId": 5066
+          },
+          {
+            "name": "pointerup",
+            "durationMs": 16,
+            "interactionId": 5066
+          },
+          {
+            "name": "click",
+            "durationMs": 16,
+            "interactionId": 5066
+          }
+        ]
+      },
+      "workers": {
+        "calculation": {
+          "samples": 363,
+          "p50Ms": 0.3000001907348633,
+          "p95Ms": 0.40000009536743164,
+          "maxMs": 295.2000002861023
+        },
+        "callbackRoundTrip": {
+          "samples": 363,
+          "p50Ms": 1.299999713897705,
+          "p95Ms": 1.5,
+          "maxMs": 319
+        },
+        "byPhase": {
+          "load": {
+            "calculation": {
+              "samples": 1,
+              "p50Ms": 295.2000002861023,
+              "p95Ms": 295.2000002861023,
+              "maxMs": 295.2000002861023
+            },
+            "callbackRoundTrip": {
+              "samples": 1,
+              "p50Ms": 319,
+              "p95Ms": 319,
+              "maxMs": 319
+            }
+          },
+          "stream-1000": {
+            "calculation": {
+              "samples": 301,
+              "p50Ms": 0.3000001907348633,
+              "p95Ms": 0.40000009536743164,
+              "maxMs": 1.200000286102295
+            },
+            "callbackRoundTrip": {
+              "samples": 301,
+              "p50Ms": 1.299999713897705,
+              "p95Ms": 1.4000000953674316,
+              "maxMs": 1.8000001907348633
+            }
+          },
+          "stream-10000": {
+            "calculation": {
+              "samples": 61,
+              "p50Ms": 0.3000001907348633,
+              "p95Ms": 0.6999998092651367,
+              "maxMs": 0.8000001907348633
+            },
+            "callbackRoundTrip": {
+              "samples": 61,
+              "p50Ms": 1.299999713897705,
+              "p95Ms": 1.5999999046325684,
+              "maxMs": 1.799999713897705
+            }
+          }
+        },
+        "maxPendingRequests": 1,
+        "undrainedRequests": 0
+      },
+      "longTasks": [
+        {
+          "phase": "load",
+          "durationMs": 56
+        },
+        {
+          "phase": "load",
+          "durationMs": 132
+        },
+        {
+          "phase": "idle",
+          "durationMs": 168
+        },
+        {
+          "phase": "idle",
+          "durationMs": 191
+        },
+        {
+          "phase": "idle",
+          "durationMs": 73
+        }
+      ],
+      "errors": [],
+      "cdpMemory": {
+        "jsHeapUsedMB": 254.73258,
+        "jsHeapTotalMB": 393.87136,
+        "note": "Main-thread V8 heap only; excludes worker heaps, canvas/GPU allocations, and native renderer memory."
+      },
+      "streaming": [
+        {
+          "rate": 1000,
+          "requestedSeconds": 5,
+          "offeredTrades": 5000,
+          "accepted": 5000,
+          "uniqueEventsLost": 0,
+          "expectedFinalVolume": 5292.018506634049,
+          "actualFinalVolume": 5292.018506634049,
+          "volumeError": 0,
+          "ingestionWallMs": 5007.400000095367,
+          "totalWallMs": 5048,
+          "workerDrainMs": 40.59999990463257,
+          "flushes": 301,
+          "maxPendingBars": 1
+        },
+        {
+          "rate": 10000,
+          "requestedSeconds": 1,
+          "offeredTrades": 10000,
+          "accepted": 10000,
+          "uniqueEventsLost": 0,
+          "expectedFinalVolume": 15292.01850663405,
+          "actualFinalVolume": 15292.01850663405,
+          "volumeError": 0,
+          "ingestionWallMs": 1008,
+          "totalWallMs": 1049,
+          "workerDrainMs": 41,
+          "flushes": 61,
+          "maxPendingBars": 1
+        }
+      ],
+      "pageErrors": []
+    },
+    {
+      "bars": 500000,
+      "windowChecks": {
+        "completeTimelineMapping": true,
+        "historicalViewportHasTrueLatestPrice": true,
+        "boundedPriceRows": true,
+        "sampledPriceRows": 2502,
+        "recursiveHeikinAshiPreserved": true
+      },
+      "indicators": [],
+      "panes": 2,
+      "readyDefinition": "Synchronous candles+volume ingestion, worker reset, all requested indicator series ingested, then two requestAnimationFrame callbacks. Excludes generated data creation and network.",
+      "readyMs": 463,
+      "candleSetDataMs": 238.19999980926514,
+      "lastIndicatorIngestionMs": 95.30000019073486,
+      "targetReadyMs": 5000,
+      "readyTargetPassed": true,
+      "frames": {
+        "setup": {
+          "samples": 1,
+          "p50Ms": 16.599999999999966,
+          "p95Ms": 16.599999999999966,
+          "maxMs": 16.599999999999966
+        },
+        "load": {
+          "samples": 9,
+          "p50Ms": 16.699999999999932,
+          "p95Ms": 250.00000000000006,
+          "maxMs": 250.00000000000006
+        },
+        "idle": {
+          "samples": 7,
+          "p50Ms": 16.700000000000045,
+          "p95Ms": 316.69999999999993,
+          "maxMs": 316.69999999999993
+        },
+        "interaction": {
+          "samples": 92,
+          "p50Ms": 16.699999999999818,
+          "p95Ms": 16.799999999999727,
+          "maxMs": 16.800000000000182
+        }
+      },
+      "inputDispatchToTwoFrames": {
+        "samples": 96,
+        "p50Ms": 17.300000190734863,
+        "p95Ms": 31.799999713897705,
+        "maxMs": 32.59999990463257,
+        "definition": "DOM input listener entry through two rAF callbacks; proxy, not a direct compositor presentation timestamp."
+      },
+      "eventTiming": {
+        "samples": 18,
+        "p50Ms": 16,
+        "p95Ms": 24,
+        "maxMs": 24,
+        "definition": "Chromium Event Timing interaction durations; entries below 16ms threshold may be absent.",
+        "entries": [
+          {
+            "name": "pointerdown",
+            "durationMs": 16,
+            "interactionId": 8336
+          },
+          {
+            "name": "pointerup",
+            "durationMs": 16,
+            "interactionId": 8336
+          },
+          {
+            "name": "click",
+            "durationMs": 16,
+            "interactionId": 8336
+          },
+          {
+            "name": "pointerdown",
+            "durationMs": 16,
+            "interactionId": 8343
+          },
+          {
+            "name": "pointerup",
+            "durationMs": 16,
+            "interactionId": 8343
+          },
+          {
+            "name": "click",
+            "durationMs": 16,
+            "interactionId": 8343
+          },
+          {
+            "name": "pointerdown",
+            "durationMs": 24,
+            "interactionId": 8350
+          },
+          {
+            "name": "pointerup",
+            "durationMs": 16,
+            "interactionId": 8350
+          },
+          {
+            "name": "click",
+            "durationMs": 16,
+            "interactionId": 8350
+          },
+          {
+            "name": "pointerdown",
+            "durationMs": 16,
+            "interactionId": 8357
+          },
+          {
+            "name": "pointerup",
+            "durationMs": 16,
+            "interactionId": 8357
+          },
+          {
+            "name": "click",
+            "durationMs": 16,
+            "interactionId": 8357
+          },
+          {
+            "name": "pointerdown",
+            "durationMs": 16,
+            "interactionId": 8364
+          },
+          {
+            "name": "pointerup",
+            "durationMs": 16,
+            "interactionId": 8364
+          },
+          {
+            "name": "click",
+            "durationMs": 16,
+            "interactionId": 8364
+          },
+          {
+            "name": "pointerdown",
+            "durationMs": 16,
+            "interactionId": 8371
+          },
+          {
+            "name": "pointerup",
+            "durationMs": 16,
+            "interactionId": 8371
+          },
+          {
+            "name": "click",
+            "durationMs": 16,
+            "interactionId": 8371
+          }
+        ]
+      },
+      "workers": {
+        "calculation": {
+          "samples": 1,
+          "p50Ms": 102.2999997138977,
+          "p95Ms": 102.2999997138977,
+          "maxMs": 102.2999997138977
+        },
+        "callbackRoundTrip": {
+          "samples": 1,
+          "p50Ms": 126.59999990463257,
+          "p95Ms": 126.59999990463257,
+          "maxMs": 126.59999990463257
+        },
+        "byPhase": {
+          "load": {
+            "calculation": {
+              "samples": 1,
+              "p50Ms": 102.2999997138977,
+              "p95Ms": 102.2999997138977,
+              "maxMs": 102.2999997138977
+            },
+            "callbackRoundTrip": {
+              "samples": 1,
+              "p50Ms": 126.59999990463257,
+              "p95Ms": 126.59999990463257,
+              "maxMs": 126.59999990463257
+            }
+          }
+        },
+        "maxPendingRequests": 1,
+        "undrainedRequests": 0
+      },
+      "longTasks": [
+        {
+          "phase": "setup",
+          "durationMs": 195
+        },
+        {
+          "phase": "load",
+          "durationMs": 252
+        },
+        {
+          "phase": "load",
+          "durationMs": 95
+        },
+        {
+          "phase": "idle",
+          "durationMs": 96
+        },
+        {
+          "phase": "idle",
+          "durationMs": 319
+        },
+        {
+          "phase": "idle",
+          "durationMs": 221
+        }
+      ],
+      "errors": [],
+      "cdpMemory": {
+        "jsHeapUsedMB": 721.954568,
+        "jsHeapTotalMB": 792.559616,
+        "note": "Main-thread V8 heap only; excludes worker heaps, canvas/GPU allocations, and native renderer memory."
+      },
+      "streaming": [],
+      "pageErrors": []
+    }
+  ]
+}
